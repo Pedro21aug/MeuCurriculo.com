@@ -54,7 +54,7 @@
     /* Seção Principal */
     .secao-principal {
       text-align: center;
-      padding: 80px 20px 60px;
+      padding: 80px 20px 40px;
     }
 
     .titulo-principal {
@@ -70,8 +70,29 @@
     .subtitulo {
       font-size: 20px;
       color: #e3f2fd;
+      margin-bottom: 0;
       font-weight: 400;
       text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .botao-escolher {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 20px 60px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .botao-escolher:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(79, 172, 254, 0.6);
     }
 
     /* Seção de Cards */
@@ -209,6 +230,11 @@
 
       .subtitulo {
         font-size: 16px;
+      }
+
+      .botao-escolher {
+        font-size: 18px;
+        padding: 18px 45px;
       }
 
       .container-cards {
