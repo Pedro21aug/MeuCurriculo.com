@@ -1,0 +1,144 @@
+    .cabecalho {
+      background: linear-gradient(to right, rgba(30, 60, 114, 0.95), rgba(42, 82, 152, 0.95));
+      padding: 20px 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .conteudo-cabecalho {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .icone-logo {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+    }
+
+    .nome-site {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .slogan {
+      font-size: 13px;
+      color: #b8d4ff;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+    
+    .icone-logo:hover {
+      transform: scale(1.05);
+      color: #4facfe;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+
+    
+    .area-conteudo {
+      padding: 40px 0;
+      min-height: calc(100% - 98px);
+    }
+    
+    .pagina-conteudo {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      min-height: 1200px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .area-botoes {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .botao {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 20px 60px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .botao:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(79, 172, 254, 0.6);
+    }
+    
+    .botao:active {
+      transform: translateY(0);
+    }
+    
+    @media (max-width: 768px) {
+      .cabecalho {
+        padding: 20px 0;
+      }
+      
+      .logo-area {
+        gap: 12px;
+      }
+      
+      .icone-logo {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .icone-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      
+      .nome-site {
+        font-size: 22px;
+      }
+      
+      .slogan {
+        font-size: 12px;
+      }
+      
+      .area-conteudo {
+        padding: 24px 0;
+      }
+      
+      .pagina-conteudo {
+        padding: 24px;
+        border-radius: 12px;
+      }
+    }

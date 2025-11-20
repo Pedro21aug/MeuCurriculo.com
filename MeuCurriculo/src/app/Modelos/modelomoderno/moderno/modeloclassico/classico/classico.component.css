@@ -1,0 +1,166 @@
+.container-curriculo {
+      background-color: #ffffff;
+      max-width: 850px;
+      width: 100%;
+      padding: 5% 7%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 1px solid #d4d4ce;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cabecalho {
+      text-align: center;
+      padding-bottom: 3%;
+      border-bottom: 3px double #2c3e50;
+      margin-bottom: 4%;
+    }
+
+    .nome-principal {
+      font-size: 2.5em;
+      font-weight: 700;
+      margin: 0 0 1% 0;
+      color: #1a252f;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .info-contato {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2%;
+      font-size: 0.95em;
+      color: #546e7a;
+      margin-top: 2%;
+    }
+
+    .item-contato {
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+    }
+
+    .separador-contato {
+      color: #90a4ae;
+    }
+
+    .secao {
+      margin-bottom: 4%;
+    }
+
+    .titulo-secao {
+      font-size: 1.4em;
+      font-weight: 700;
+      color: #1a252f;
+      margin-bottom: 2%;
+      padding-bottom: 1%;
+      border-bottom: 2px solid #2c3e50;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .item-experiencia,
+    .item-formacao {
+      margin-bottom: 3%;
+    }
+
+    .titulo-cargo {
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 0.3em;
+    }
+
+    .subtitulo-instituicao {
+      font-size: 0.95em;
+      color: #546e7a;
+      font-style: italic;
+      margin-bottom: 0.5em;
+    }
+
+    .periodo {
+      font-size: 0.9em;
+      color: #78909c;
+      margin-bottom: 0.8em;
+    }
+
+    .descricao {
+      font-size: 0.95em;
+      line-height: 1.7;
+      color: #455a64;
+      text-align: justify;
+    }
+
+    .lista-habilidades {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item-habilidade {
+      margin-bottom: 2%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nome-habilidade {
+      font-size: 1em;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    .nivel-habilidade {
+      font-size: 0.9em;
+      color: #607d8b;
+      font-style: italic;
+      padding: 0.3em 1em;
+      background-color: #eceff1;
+      border-radius: 3px;
+    }
+
+    .texto-adicional {
+      font-size: 0.95em;
+      line-height: 1.7;
+      color: #455a64;
+      text-align: justify;
+    }
+
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      
+      .container-curriculo {
+        box-shadow: none;
+        border: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container-curriculo {
+        padding: 8% 6%;
+      }
+
+      .nome-principal {
+        font-size: 2em;
+      }
+
+      .info-contato {
+        flex-direction: column;
+        align-items: center;
+        gap: 1%;
+      }
+
+      .separador-contato {
+        display: none;
+      }
+
+      .item-habilidade {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+      }
+    }
