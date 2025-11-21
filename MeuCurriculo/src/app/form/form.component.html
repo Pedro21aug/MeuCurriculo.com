@@ -1,63 +1,173 @@
-<div class="container">
-   <header class="cabecalho">
-    <div class="icone-formulario">
-     <svg width="45" height="45" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M14 2V8H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M16 13H8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M16 17H8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                                 <!--CABEÇALHO-->
+
+<header class="cabecalho">
+   <div class="conteudo-cabecalho">
+    <div class="icone-logo">
+     <svg width="30" height="30" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M14 2V8H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M16 13H8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M16 17H8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M10 9H9H8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
      </svg>
     </div>
-    <h1 class="titulo-formulario" id="titulo-formulario">Preencha seu Currículo</h1>
-    <p class="subtitulo-formulario" id="subtitulo-formulario">Complete as informações abaixo para criar seu currículo profissional</p>
-   </header>
-   <main>
-    <form class="card-formulario" id="form-curriculo">
-      
-      
-                                                                     <!--DADOS PESSOAIS-->
-     <section class="secao-form">
-      <h2 class="titulo-secao">Dados Pessoais</h2>
-      <div class="grupo-form"><label for="nome">Nome Completo</label> <input type="text" id="nome" name="nome">
-      </div>
-      <div class="grupo-form-linha">
-       <div class="grupo-form"><label for="idade">Idade</label> <input type="number" id="idade" name="idade" min="16" max="100">
-       </div>
-       <div class="grupo-form"><label for="telefone">Telefone</label> <input type="tel" id="telefone" name="telefone">
-       </div>
-      </div>
-      <div class="grupo-form"><label for="email">E-mail</label> <input type="email" id="email" name="email">
-      </div>
-     </section>
-     
-     
-                                                                   <!--FORMAÇÃO ACADÊMICA-->
-     <section class="secao-form">
-      <h2 class="titulo-secao">Formação Acadêmica</h2>
-      <div class="grupo-form"><label for="formacao">Descreva sua formação acadêmica</label> <textarea id="formacao" name="formacao"></textarea>
-      </div>
-     </section>
-     
-                                                                 <!--EXPERIÊNCIA PROFISSIONAL-->
-     <section class="secao-form">
-      <h2 class="titulo-secao">Experiência Profissional</h2>
-      <div class="grupo-form"><label for="experiencia">Descreva suas experiências profissionais</label> <textarea id="experiencia" name="experiencia"></textarea>
-      </div>
-     </section>
-     
-                                                                       <!--HABILIDADES-->
-     <section class="secao-form">
-      <h2 class="titulo-secao">Habilidades</h2>
-      <div id="habilidades-container"></div><button type="button" class="botao-adicionar" id="adicionar-habilidade">
-       <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-       </svg> Adicionar Habilidade </button>
-     </section>
-     
-                                                                 <!--INFORMAÇÕES ADICIONAIS-->
-     <section class="secao-form">
-      <h2 class="titulo-secao">Informações Adicionais</h2>
-      <div class="grupo-form"><label for="informacoes">Outras informações relevantes (certificações, idiomas, etc.)</label> <textarea id="informacoes" name="informacoes"></textarea>
-      </div>
-     </section>
-     
-                                                                  <!--BOTÃO ENVIAR CURRÍCULO-->
-     <button type="submit" class="botao-salvar" id="botao-salvar"> <span id="texto-botao-salvar">Salvar Currículo</span> </button>
-    </form>
-   </main>
-  </div>
+    <div>
+     <h1 class="nome-site">MeuCurriculo.com</h1>
+     <p class="slogan">Seu futuro começa aqui</p>
+    </div>
+   </div>
+  </header>
+  <main class="container">
+   <form class="formulario-curriculo">
+    <h2 class="titulo-formulario">Preencha seu Currículo</h2>
+
+                                                          <!--SEÇÃO DADOS PESSOAIS-->
+
+    <h3 class="titulo-secao">Dados Pessoais</h3>
+
+                                                                  <!--NOME-->
+    <div class="grupo-campo"><label for="nome-completo">Nome Completo</label> <input type="text" id="nome-completo" placeholder="Digite seu nome completo">
+    </div>
+    <div class="grupo-linha">
+                                                                  <!--IDADE-->
+     <div class="grupo-campo"><label for="idade">Idade</label> <input type="number" id="idade" placeholder="Digite sua idade">
+     </div>
+                                                                 <!--TELEFONE-->
+     <div class="grupo-campo"><label for="telefone">Telefone</label> <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+     </div>
+                                                                  <!--EMAIL-->
+    </div>
+    <div class="grupo-campo"><label for="email">E-mail</label> <input type="email" id="email" placeholder="seuemail@exemplo.com">
+    </div>
+
+
+
+
+                                                              <!--FORMAÇÕES ACADÊMICAS-->
+
+
+    <h3 class="titulo-secao">Formação Acadêmica</h3>
+    <div class="grupo-campo"><label for="instituicao">Instituição de Ensino</label> <input type="text" id="instituicao-1" placeholder="Nome da instituição">
+    </div>
+    <div class="grupo-campo"><label for="curso">Curso</label> <input type="text" id="curso-1" placeholder="Nome do curso">
+    </div>
+    <div class="grupo-linha">
+     <div class="grupo-campo"><label for="periodo-inicio-formacao">Período (Início)</label> <input type="text" id="periodo-inicio-formacao-1" placeholder="Ex: 2018">
+     </div>
+     <div class="grupo-campo"><label for="periodo-fim-formacao">Período (Fim)</label> <input type="text" id="periodo-fim-formacao-1" placeholder="Ex: 2022 ou Em andamento">
+     </div>
+    </div>
+
+    <h3 class="titulo-secao">Formação 2</h3>
+
+      <div class="grupo-campo"><label for="instituicao">Instituição de Ensino</label> <input type="text" id="instituicao-2" placeholder="Nome da instituição">
+    </div>
+    <div class="grupo-campo"><label for="curso">Curso</label> <input type="text" id="curso-2" placeholder="Nome do curso">
+    </div>
+    <div class="grupo-linha">
+     <div class="grupo-campo"><label for="periodo-inicio-formacao">Período (Início)</label> <input type="text" id="periodo-inicio-formacao-2" placeholder="Ex: 2018">
+     </div>
+     <div class="grupo-campo"><label for="periodo-fim-formacao">Período (Fim)</label> <input type="text" id="periodo-fim-formacao-2" placeholder="Ex: 2022 ou Em andamento">
+     </div>
+    </div>
+
+    <h3 class="titulo-secao">Formação 3</h3>
+
+      <div class="grupo-campo"><label for="instituicao">Instituição de Ensino</label> <input type="text" id="instituicao-3" placeholder="Nome da instituição">
+    </div>
+    <div class="grupo-campo"><label for="curso">Curso</label> <input type="text" id="curso-3" placeholder="Nome do curso">
+    </div>
+    <div class="grupo-linha">
+     <div class="grupo-campo"><label for="periodo-inicio-formacao">Período (Início)</label> <input type="text" id="periodo-inicio-formacao-3" placeholder="Ex: 2018">
+     </div>
+     <div class="grupo-campo"><label for="periodo-fim-formacao">Período (Fim)</label> <input type="text" id="periodo-fim-formacao-3" placeholder="Ex: 2022 ou Em andamento">
+     </div>
+    </div>
+
+    
+
+
+
+                                                             <!--EXPERIÊNCIAS PROFISSIONAIS-->
+
+    <h3 class="titulo-secao">Experiência Profissional</h3>
+    <div class="grupo-campo"><label for="empresa">Empresa</label> <input type="text" id="empresa-1" placeholder="Nome da empresa">
+    </div>
+    <div class="grupo-campo"><label for="cargo">Cargo</label> <input type="text" id="cargo-1" placeholder="Seu cargo na empresa">
+    </div>
+    <div class="grupo-linha">
+     <div class="grupo-campo"><label for="periodo-inicio">Período (Início)</label> <input type="text" id="periodo-inicio-1" placeholder="Ex: Jan/2020">
+     </div>
+     <div class="grupo-campo"><label for="periodo-fim">Período (Fim)</label> <input type="text" id="periodo-fim-1" placeholder="Ex: Dez/2022 ou Atual">
+     </div>
+    </div>
+    <div class="grupo-campo"><label for="descricao">Descrição das Atividades</label> <textarea id="descricao-1" placeholder="Descreva suas principais responsabilidades"></textarea>
+    </div>
+
+
+   <h3 class="titulo-secao">Experiência 2</h3>
+    <div class="grupo-campo"><label for="empresa">Empresa</label> <input type="text" id="empresa-2" placeholder="Nome da empresa">
+    </div>
+    <div class="grupo-campo"><label for="cargo">Cargo</label> <input type="text" id="cargo-2" placeholder="Seu cargo na empresa">
+    </div>
+    <div class="grupo-linha">
+     <div class="grupo-campo"><label for="periodo-inicio">Período (Início)</label> <input type="text" id="periodo-inicio-2" placeholder="Ex: Jan/2020">
+     </div>
+     <div class="grupo-campo"><label for="periodo-fim">Período (Fim)</label> <input type="text" id="periodo-fim-2" placeholder="Ex: Dez/2022 ou Atual">
+     </div>
+    </div>
+    <div class="grupo-campo"><label for="descricao">Descrição das Atividades</label> <textarea id="descricao-2" placeholder="Descreva suas principais responsabilidades"></textarea>
+    </div>
+
+
+      <h3 class="titulo-secao">Experiência 3</h3>
+    <div class="grupo-campo"><label for="empresa">Empresa</label> <input type="text" id="empresa-3" placeholder="Nome da empresa">
+    </div>
+    <div class="grupo-campo"><label for="cargo">Cargo</label> <input type="text" id="cargo-3" placeholder="Seu cargo na empresa">
+    </div>
+    <div class="grupo-linha">
+     <div class="grupo-campo"><label for="periodo-inicio">Período (Início)</label> <input type="text" id="periodo-inicio-3" placeholder="Ex: Jan/2020">
+     </div>
+     <div class="grupo-campo"><label for="periodo-fim">Período (Fim)</label> <input type="text" id="periodo-fim-3" placeholder="Ex: Dez/2022 ou Atual">
+     </div>
+    </div>
+    <div class="grupo-campo"><label for="descricao">Descrição das Atividades</label> <textarea id="descricao-3" placeholder="Descreva suas principais responsabilidades"></textarea>
+    </div>
+
+
+
+
+
+                                                                     <!--HABILIDADES-->
+
+    <h3 class="titulo-secao">Habilidades</h3>
+    <div class="grupo-linha">
+     <div class="grupo-campo"><label for="habilidade-1">Habilidade 1</label> <input type="text" id="habilidade-1" placeholder="Ex: Excel">
+     </div>
+     <div class="grupo-campo"><label for="nivel-1">Nível</label> <select id="nivel-1"> <option value="">Selecione</option> <option value="basico">Básico</option> <option value="intermediario">Intermediário</option> <option value="avancado">Avançado</option> </select>
+     </div>
+    </div>
+
+    <div class="grupo-linha">
+     <div class="grupo-campo"><label for="habilidade-2">Habilidade 2</label> <input type="text" id="habilidade-2" placeholder="Ex: Inglês">
+     </div>
+     <div class="grupo-campo"><label for="nivel-2">Nível</label> <select id="nivel-2"> <option value="">Selecione</option> <option value="basico">Básico</option> <option value="intermediario">Intermediário</option> <option value="avancado">Avançado</option> </select>
+     </div>
+    </div>
+
+    <div class="grupo-linha">
+     <div class="grupo-campo"><label for="habilidade-2">Habilidade 3</label> <input type="text" id="habilidade-3" placeholder="Ex: Inglês">
+     </div>
+     <div class="grupo-campo"><label for="nivel-2">Nível</label> <select id="nivel-3"> <option value="">Selecione</option> <option value="basico">Básico</option> <option value="intermediario">Intermediário</option> <option value="avancado">Avançado</option> </select>
+     </div>
+    </div>
+
+
+                                                                <!--INFORMAÇÕES ADICIONAIS-->
+
+    <h3 class="titulo-secao">Informações Adicionais</h3>
+    <div class="grupo-campo"><label for="informacoes-adicionais">Informações Adicionais</label> <textarea id="informacoes-adicionais" placeholder="Objetivos, certificações, idiomas, etc."></textarea>
+    </div>
+    
+   </form>
+
+                                                             <!--BOTÃO GERAR CURRÍCULO-->
+
+   <button type="submit" class="botao-gerar">Gerar Currículo</button>
+
+  </main>

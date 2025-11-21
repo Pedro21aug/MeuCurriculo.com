@@ -1,166 +1,167 @@
-.container-curriculo {
-      background-color: #ffffff;
-      max-width: 850px;
-      width: 100%;
-      padding: 5% 7%;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      border: 1px solid #d4d4ce;
-      margin-left: auto;
-      margin-right: auto;
+.container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 24px;
     }
-
-    .cabecalho {
-      text-align: center;
-      padding-bottom: 3%;
-      border-bottom: 3px double #2c3e50;
-      margin-bottom: 4%;
+    
+    /* Modelo de Currículo */
+    .curriculo-modelo {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      min-height: 1100px;
     }
-
-    .nome-principal {
-      font-size: 2.5em;
+    
+    .curriculo-cabecalho {
+      background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+      padding: 50px 60px;
+      color: white;
+    }
+    
+    .curriculo-nome {
+      font-size: 42px;
       font-weight: 700;
-      margin: 0 0 1% 0;
-      color: #1a252f;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
     }
-
-    .info-contato {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2%;
-      font-size: 0.95em;
-      color: #546e7a;
-      margin-top: 2%;
+    
+    .curriculo-idade {
+      font-size: 18px;
+      opacity: 0.95;
+      font-weight: 400;
     }
-
-    .item-contato {
-      display: flex;
-      align-items: center;
-      gap: 0.4em;
+    
+    .curriculo-corpo {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: 900px;
     }
-
-    .separador-contato {
-      color: #90a4ae;
+    
+    .curriculo-lateral {
+      background: #f8f9fa;
+      padding: 40px 30px;
+      border-right: 3px solid #e9ecef;
     }
-
-    .secao {
-      margin-bottom: 4%;
+    
+    .curriculo-principal {
+      padding: 40px 50px;
     }
-
-    .titulo-secao {
-      font-size: 1.4em;
+    
+    .secao-titulo {
+      font-size: 20px;
       font-weight: 700;
-      color: #1a252f;
-      margin-bottom: 2%;
-      padding-bottom: 1%;
-      border-bottom: 2px solid #2c3e50;
+      color: #dc2626;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #ef4444;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
-
-    .item-experiencia,
-    .item-formacao {
-      margin-bottom: 3%;
+    
+    .info-item {
+      margin-bottom: 20px;
     }
-
-    .titulo-cargo {
-      font-size: 1.1em;
+    
+    .info-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #6c757d;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    
+    .info-valor {
+      font-size: 15px;
+      color: #333;
+      font-weight: 500;
+      word-break: break-word;
+    }
+    
+    .experiencia-bloco,
+    .formacao-bloco {
+      margin-bottom: 30px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .experiencia-bloco:last-child,
+    .formacao-bloco:last-child {
+      border-bottom: none;
+    }
+    
+    .experiencia-titulo {
+      font-size: 20px;
       font-weight: 700;
       color: #2c3e50;
-      margin-bottom: 0.3em;
+      margin-bottom: 6px;
     }
-
-    .subtitulo-instituicao {
-      font-size: 0.95em;
-      color: #546e7a;
-      font-style: italic;
-      margin-bottom: 0.5em;
-    }
-
-    .periodo {
-      font-size: 0.9em;
-      color: #78909c;
-      margin-bottom: 0.8em;
-    }
-
-    .descricao {
-      font-size: 0.95em;
-      line-height: 1.7;
-      color: #455a64;
-      text-align: justify;
-    }
-
-    .lista-habilidades {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .item-habilidade {
-      margin-bottom: 2%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nome-habilidade {
-      font-size: 1em;
-      color: #2c3e50;
+    
+    .experiencia-empresa {
+      font-size: 16px;
+      color: #dc2626;
       font-weight: 600;
+      margin-bottom: 6px;
     }
-
-    .nivel-habilidade {
-      font-size: 0.9em;
-      color: #607d8b;
-      font-style: italic;
-      padding: 0.3em 1em;
-      background-color: #eceff1;
-      border-radius: 3px;
+    
+    .experiencia-periodo {
+      font-size: 14px;
+      color: #6c757d;
+      font-weight: 500;
+      margin-bottom: 12px;
     }
-
-    .texto-adicional {
-      font-size: 0.95em;
+    
+    .experiencia-descricao {
+      font-size: 15px;
+      color: #495057;
+      line-height: 1.6;
+    }
+    
+    .habilidade-item {
+      margin-bottom: 15px;
+    }
+    
+    .habilidade-nome {
+      font-size: 15px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    
+    .habilidade-nivel-texto {
+      font-size: 14px;
+      color: #6c757d;
+      text-transform: capitalize;
+      margin-top: 4px;
+    }
+    
+    .informacoes-adicionais-texto {
+      font-size: 15px;
+      color: #495057;
       line-height: 1.7;
-      color: #455a64;
-      text-align: justify;
+      white-space: pre-wrap;
     }
-
-    @media print {
-      body {
-        background-color: #ffffff;
-        padding: 0;
+    
+    @media (max-width: 768px) {
+      .curriculo-corpo {
+        grid-template-columns: 1fr;
       }
       
-      .container-curriculo {
-        box-shadow: none;
-        border: none;
+      .curriculo-lateral {
+        border-right: none;
+        border-bottom: 3px solid #e9ecef;
       }
-    }
-
-    @media (max-width: 768px) {
-      .container-curriculo {
-        padding: 8% 6%;
+      
+      .curriculo-cabecalho {
+        padding: 30px;
       }
-
-      .nome-principal {
-        font-size: 2em;
+      
+      .curriculo-nome {
+        font-size: 32px;
       }
-
-      .info-contato {
-        flex-direction: column;
-        align-items: center;
-        gap: 1%;
-      }
-
-      .separador-contato {
-        display: none;
-      }
-
-      .item-habilidade {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5em;
+      
+      .curriculo-lateral,
+      .curriculo-principal {
+        padding: 30px;
       }
     }

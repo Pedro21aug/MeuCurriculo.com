@@ -1,126 +1,167 @@
-    .resume-container {
-      max-width: 900px;
-      width: 100%;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      margin-left: auto;
-      margin-right: auto;
+.container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 24px;
     }
-
-    .sidebar {
-      background: linear-gradient(180deg, #2d3748 0%, #1a202c 100%);
-      padding: 40px 30px;
+    
+    /* Modelo de Currículo */
+    .curriculo-modelo {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      min-height: 1100px;
+    }
+    
+    .curriculo-cabecalho {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      padding: 50px 60px;
       color: white;
     }
-
-    .profile-section {
-      text-align: left;
-      margin-bottom: 40px;
-    }
-
-    .name {
-      font-size: 24px;
+    
+    .curriculo-nome {
+      font-size: 42px;
       font-weight: 700;
-      margin-bottom: 15px;
-      line-height: 1.2;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
     }
-
-    .contact-item {
-      margin-bottom: 15px;
-      font-size: 14px;
-    }
-
-    .section-title {
+    
+    .curriculo-idade {
       font-size: 18px;
+      opacity: 0.95;
+      font-weight: 400;
+    }
+    
+    .curriculo-corpo {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: 900px;
+    }
+    
+    .curriculo-lateral {
+      background: #f8f9fa;
+      padding: 40px 30px;
+      border-right: 3px solid #e9ecef;
+    }
+    
+    .curriculo-principal {
+      padding: 40px 50px;
+    }
+    
+    .secao-titulo {
+      font-size: 20px;
       font-weight: 700;
+      color: #1e40af;
       margin-bottom: 20px;
       padding-bottom: 10px;
-      border-bottom: 2px solid #667eea;
-      color: #667eea;
+      border-bottom: 3px solid #2563eb;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-
-    .sidebar .section-title {
-      color: #667eea;
-      border-bottom-color: #667eea;
+    
+    .info-item {
+      margin-bottom: 20px;
     }
-
-    .skill-item {
-      margin-bottom: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .skill-name {
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .skill-level-text {
+    
+    .info-label {
       font-size: 13px;
-      color: #667eea;
       font-weight: 600;
+      color: #6c757d;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
     }
-
-    .main-content {
-      padding: 40px;
+    
+    .info-valor {
+      font-size: 15px;
+      color: #333;
+      font-weight: 500;
+      word-break: break-word;
     }
-
-    .main-section {
-      margin-bottom: 35px;
+    
+    .experiencia-bloco,
+    .formacao-bloco {
+      margin-bottom: 30px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #e9ecef;
     }
-
-    .main-content .section-title {
-      color: #2d3748;
+    
+    .experiencia-bloco:last-child,
+    .formacao-bloco:last-child {
+      border-bottom: none;
+    }
+    
+    .experiencia-titulo {
       font-size: 20px;
-    }
-
-    .entry {
-      margin-bottom: 25px;
-      padding-left: 20px;
-      border-left: 3px solid #667eea;
-    }
-
-    .entry-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 8px;
-      flex-wrap: wrap;
-    }
-
-    .entry-title {
-      font-size: 16px;
       font-weight: 700;
-      color: #2d3748;
+      color: #2c3e50;
+      margin-bottom: 6px;
     }
-
-    .entry-period {
-      font-size: 13px;
-      color: #718096;
+    
+    .experiencia-empresa {
+      font-size: 16px;
+      color: #1e40af;
       font-weight: 600;
+      margin-bottom: 6px;
     }
-
-    .entry-subtitle {
+    
+    .experiencia-periodo {
       font-size: 14px;
-      color: #4a5568;
-      font-weight: 600;
-      margin-bottom: 8px;
+      color: #6c757d;
+      font-weight: 500;
+      margin-bottom: 12px;
     }
-
-    .entry-description {
-      font-size: 14px;
-      color: #4a5568;
+    
+    .experiencia-descricao {
+      font-size: 15px;
+      color: #495057;
       line-height: 1.6;
     }
-
-    .additional-info {
-      font-size: 14px;
-      color: #4a5568;
-      line-height: 1.8;
+    
+    .habilidade-item {
+      margin-bottom: 15px;
     }
-
+    
+    .habilidade-nome {
+      font-size: 15px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    
+    .habilidade-nivel-texto {
+      font-size: 14px;
+      color: #6c757d;
+      text-transform: capitalize;
+      margin-top: 4px;
+    }
+    
+    .informacoes-adicionais-texto {
+      font-size: 15px;
+      color: #495057;
+      line-height: 1.7;
+      white-space: pre-wrap;
+    }
+    
+    @media (max-width: 768px) {
+      .curriculo-corpo {
+        grid-template-columns: 1fr;
+      }
+      
+      .curriculo-lateral {
+        border-right: none;
+        border-bottom: 3px solid #e9ecef;
+      }
+      
+      .curriculo-cabecalho {
+        padding: 30px;
+      }
+      
+      .curriculo-nome {
+        font-size: 32px;
+      }
+      
+      .curriculo-lateral,
+      .curriculo-principal {
+        padding: 30px;
+      }
+    }
