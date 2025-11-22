@@ -1,7 +1,6 @@
 .container {
-      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 50px;
     }
 
     /* Cabeçalho Melhorado */
@@ -32,9 +31,10 @@
       background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
       border-radius: 12px;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+    
     }
 
     .nome-site {
