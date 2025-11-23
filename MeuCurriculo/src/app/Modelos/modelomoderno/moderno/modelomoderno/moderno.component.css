@@ -165,3 +165,74 @@
         padding: 30px;
       }
     }
+
+    @media print {
+
+  
+  body * {
+    visibility: hidden;
+  }
+
+  #pagina-conteudo, #pagina-conteudo * {
+    visibility: visible;
+  }
+
+  .curriculo-cabecalho, .curriculo-cabecalho * {
+    visibility: visible !important;
+    display: block !important;
+  }
+
+  #pagina-conteudo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 210mm;
+    height: 297mm;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  
+  header.cabecalho, .area-botoes {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  
+  .container {
+    max-width: 210mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .curriculo-modelo {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    min-height: 297mm !important;
+  }
+
+  .curriculo-corpo {
+    display: grid !important;
+    grid-template-columns: 320px 1fr !important;
+  }
+
+  
+  * {
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+  }
+}

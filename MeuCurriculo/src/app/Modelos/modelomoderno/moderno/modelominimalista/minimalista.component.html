@@ -1,39 +1,53 @@
 <main class="container">
    <div class="curriculo-modelo">
       
-                                                    <!--CABEÇALHO CURRÍCULO-->
+                                                                             <!--CABEÇALHO CURRÍCULO-->
     <div class="curriculo-cabecalho">
-     <h1 class="curriculo-nome" id="curriculo-nome-completo">João da Silva Santos</h1>
-     <p class="curriculo-idade" id="curriculo-idade">28 anos</p>
+     <h1 class="curriculo-nome" 
+     id="curriculo-nome-completo">
+     {{ nomeCompleto || 'Seu nome aparecerá aqui'}}</h1>
+
+
+     <p class="curriculo-idade" 
+     id="curriculo-idade">
+     {{idade ? idade + ' anos' : 'Sua idade aparecerá aqui'}}</p>
     </div>
     
-                                                      <!--CORPO CURRÍCULO-->
+                                                                              <!--CORPO CURRÍCULO-->
 
 
 
 
     <div class="curriculo-corpo">
       
-                                                       <!--BARRA LATERAL-->
+                                                                              <!--BARRA LATERAL-->
      <aside class="curriculo-lateral">
       
-                                                         <!--CONTATOS-->
+                                                                                <!--CONTATOS-->
       <section>
        <h2 class="secao-titulo">Contatos</h2>
+
+
        <div class="info-item">
         <div class="info-label">
-         Telefone
+         (Telefone)
         </div>
-        <div class="info-valor" id="curriculo-telefone">
-         (11) 98765-4321
+        <div 
+          class="info-valor" 
+          id="curriculo-telefone"> 
+          {{ telefone || 'Seu telefone aparecerá aqui'}}
         </div>
        </div>
+
+
        <div class="info-item">
         <div class="info-label">
          E-mail
         </div>
-        <div class="info-valor" id="curriculo-email">
-         joao.silvaemail.com
+        <div 
+          class="info-valor" 
+          id="curriculo-email"> 
+          {{ email || 'Seu E-mail aparecerá aqui'}}
         </div>
        </div>
       </section>
@@ -41,37 +55,39 @@
 
 
 
-                                                       <!--HABILIDADES-->
+                                                                                  <!--HABILIDADES-->
       <section style="margin-top: 40px;">
        <h2 class="secao-titulo">Habilidades</h2>
 
-                                                      <!--HABILIDADE 1-->
+                                                                                 <!--HABILIDADE 1-->
        <div class="habilidade-item">
         <div class="habilidade-nome" id="curriculo-habilidade-1">
-         Excel
+         {{ habilidade1 || 'Habilidade' }}
         </div>
         <div class="habilidade-nivel-texto" id="curriculo-nivel-1">
-         Avançado
+         {{ nivel1 || 'Nível'}}
         </div>
        </div>
 
-                                                      <!--HABILIDADE 2-->
+                                                                                 <!--HABILIDADE 2-->
        <div class="habilidade-item">
         <div class="habilidade-nome" id="curriculo-habilidade-2">
-         Excel
+         {{ habilidade2 || 'Habilidade' }}
+
         </div>
         <div class="habilidade-nivel-texto" id="curriculo-nivel-2">
-         Avançado
+         {{ nivel2 || 'Nível'}}
         </div>
        </div>
 
-                                                      <!--HABILIDADE 3-->
+                                                                                 <!--HABILIDADE 3-->
         <div class="habilidade-item">
         <div class="habilidade-nome" id="curriculo-habilidade-3">
-         Excel
+         {{ habilidade3 || 'Habilidade' }}
+
         </div>
         <div class="habilidade-nivel-texto" id="curriculo-nivel-3">
-         Avançado
+         {{ nivel3 || 'Nível'}}
         </div>
        </div>
 
@@ -81,107 +97,139 @@
      
      
      
-                                                         <!--CONTEÚDO PRINCIPAL-->
+                                                                             <!--CONTEÚDO PRINCIPAL-->
      <div class="curriculo-principal">
       
       
       
       
       
-                                                        <!--FORMAÇÕES ACADÊMICAS-->
+                                                                              <!--FORMAÇÕES ACADÊMICAS-->
       <section>
-       <h2 class="secao-titulo">Formação Acadêmica</h2>
+       <h2 class="secao-titulo">Formações Acadêmicas</h2>
+
+                                                                                   <!--FORMAÇÃO 1-->
+
        <div class="formacao-bloco">
-        <div class="experiencia-titulo" id="curriculo-curso-1">
-         Bacharelado em Administração
+        <div 
+          class="experiencia-titulo" 
+          id="curriculo-curso-1">
+         {{ curso || 'Curso'}}
         </div>
-        <div class="experiencia-empresa" id="curriculo-instituicao-1">
-         Universidade de São Paulo
+
+        <div 
+          class="experiencia-empresa" 
+          id="curriculo-instituicao-1">
+          {{ instituicao || 'instituição'}}
         </div>
-        <div class="experiencia-periodo"><span id="curriculo-periodo-inicio-formacao-1">2015</span> - <span id="curriculo-periodo-fim-formacao-1">2019</span>
+
+        <div 
+          class="experiencia-periodo">
+          <span id="curriculo-periodo-inicio-formacao-1">{{ inicio || 'Início ' }}</span> - 
+          <span id="curriculo-periodo-fim-formacao-1">{{ fim || 'Fim' }}</span>
         </div>
        </div>
+
+
+                                                                                   <!--FORMAÇÃO 2-->
 
           <div class="formacao-bloco">
-        <div class="experiencia-titulo" id="curriculo-curso-2">
-         Bacharelado em Administração
+        <div 
+          class="experiencia-titulo" 
+          id="curriculo-curso-2">
+         {{ curso2 || 'Curso'}}
         </div>
-        <div class="experiencia-empresa" id="curriculo-instituicao-2">
-         Universidade de São Paulo
+
+        <div 
+          class="experiencia-empresa" 
+          id="curriculo-instituicao-2">
+          {{ instituicao2 || 'instituição'}}
         </div>
-        <div class="experiencia-periodo"><span id="curriculo-periodo-inicio-formacao-2">2015</span> - <span id="curriculo-periodo-fim-formacao-2">2019</span>
+
+        <div 
+        class="experiencia-periodo">
+          <span id="curriculo-periodo-inicio-formacao-1">{{ inicio2 || 'Início ' }}</span> - 
+          <span id="curriculo-periodo-fim-formacao-1">{{ fim2 || 'Fim' }}</span>
         </div>
        </div>
 
-          <div class="formacao-bloco">
-        <div class="experiencia-titulo" id="curriculo-curso-3">
-         Bacharelado em Administração
-        </div>
-        <div class="experiencia-empresa" id="curriculo-instituicao-3">
-         Universidade de São Paulo
-        </div>
-        <div class="experiencia-periodo"><span id="curriculo-periodo-inicio-formacao-3">2015</span> - <span id="curriculo-periodo-fim-formacao-3">2019</span>
-        </div>
-       </div>
-
-       
       </section>
       
       
-                                                   <!--EXPERIÊNCIAS PROFISSIONAIS-->
+                                                                        <!--EXPERIÊNCIAS PROFISSIONAIS-->
       <section style="margin-top: 40px;">
-       <h2 class="secao-titulo">Experiência Profissional</h2>
+       <h2 class="secao-titulo">Experiências Profissionais</h2>
+
+                                                                              <!--EXPERIÊNCIA 1-->
+
+
        <div class="experiencia-bloco">
-        <div class="experiencia-titulo" id="curriculo-cargo-1">
-         Analista Administrativo
+        <div 
+          class="experiencia-titulo" 
+          id="curriculo-cargo-1">
+         {{ cargo || 'Cargo'}}
         </div>
-        <div class="experiencia-empresa" id="curriculo-empresa-1">
-         Empresa XYZ Ltda
+
+        <div 
+          class="experiencia-empresa" 
+          id="curriculo-empresa-1">
+         {{ empresa || 'Empresa'}}
         </div>
-        <div class="experiencia-periodo"><span id="curriculo-periodo-inicio-1">Jan/2020</span> - <span id="curriculo-periodo-fim-1">Atual</span>
+
+        <div 
+          class="experiencia-periodo"><span 
+          id="curriculo-periodo-inicio-1">{{ inicioEmpresa || 'Início' }}</span> - 
+        <span id="curriculo-periodo-fim-1">{{ fimEmpresa || 'Fím'}}</span>
+        
         </div>
-        <div class="experiencia-descricao" id="curriculo-descricao-1">
-         Responsável pela gestão de processos administrativos, controle de documentos, atendimento a fornecedores e suporte às áreas de compras e financeiro. Implementação de melhorias nos processos internos resultando em redução de 30% no tempo de execução das atividades.
+
+        <div 
+          class="experiencia-descricao" 
+          id="curriculo-descricao-1">
+          {{ descricao || 'Descrição das atividades'}}
         </div>
        </div>
 
-       <div class="experiencia-bloco">
-        <div class="experiencia-titulo" id="curriculo-cargo-2">
-         Analista Administrativo
-        </div>
-        <div class="experiencia-empresa" id="curriculo-empresa-2">
-         Empresa XYZ Ltda
-        </div>
-        <div class="experiencia-periodo"><span id="curriculo-periodo-inicio-2">Jan/2020</span> - <span id="curriculo-periodo-fim-2">Atual</span>
-        </div>
-        <div class="experiencia-descricao" id="curriculo-descricao-2">
-         Responsável pela gestão de processos administrativos, controle de documentos, atendimento a fornecedores e suporte às áreas de compras e financeiro. Implementação de melhorias nos processos internos resultando em redução de 30% no tempo de execução das atividades.
-        </div>
-       </div>
+                                                                            <!--EXPERIÊNCIA 2-->
 
        <div class="experiencia-bloco">
-        <div class="experiencia-titulo" id="curriculo-cargo-3">
-         Analista Administrativo
+        <div 
+          class="experiencia-titulo" 
+          id="curriculo-cargo-1">
+         {{ cargo2 || 'Cargo'}}
         </div>
-        <div class="experiencia-empresa" id="curriculo-empresa-3">
-         Empresa XYZ Ltda
+
+        <div 
+          class="experiencia-empresa" 
+          id="curriculo-empresa-1">
+         {{ empresa2 || 'Empresa'}}
         </div>
-        <div class="experiencia-periodo"><span id="curriculo-periodo-inicio-3">Jan/2020</span> - <span id="curriculo-periodo-fim-3">Atual</span>
+
+        <div 
+          class="experiencia-periodo"><span 
+          id="curriculo-periodo-inicio-1">{{ inicioEmpresa2 || 'Início' }}</span> - 
+        <span id="curriculo-periodo-fim-1">{{ fimEmpresa2 || 'Fím'}}</span>
+        
         </div>
-        <div class="experiencia-descricao" id="curriculo-descricao-3">
-         Responsável pela gestão de processos administrativos, controle de documentos, atendimento a fornecedores e suporte às áreas de compras e financeiro. Implementação de melhorias nos processos internos resultando em redução de 30% no tempo de execução das atividades.
+
+        <div 
+          class="experiencia-descricao" 
+          id="curriculo-descricao-1">
+          {{ descricao2 || 'Descrição das atividades'}}
         </div>
        </div>
 
       </section>
       
-                                                   <!--INFORMAÇÕES ADICIONAIS-->
+                                                                       <!--INFORMAÇÕES ADICIONAIS-->
       <section style="margin-top: 40px;">
        <h2 class="secao-titulo">Informações Adicionais</h2>
        <div class="informacoes-adicionais-texto" id="curriculo-informacoes-adicionais">
-        Certificações: Curso de Excel Avançado (80h), Gestão de Projetos (40h) Idiomas: Inglês intermediário, Espanhol básico Disponibilidade para viagens e mudança de cidade
+        {{ adicionais || 'Informações Adicionais' }}
        </div>
       </section>
+
+      
      </div>
     </div>
    </div>

@@ -27,8 +27,9 @@
 
                                                                          <!--CARDS MODELOS-->
    <section class="secao-modelos">
-    <div class="container">
-     <div class="container-modelos">
+    
+      <div class="container">
+         <div class="container-modelos">
       
                                                                          <!--MODELO 1: TECH-->
       <article class="card-modelo" data-modelo="tech">
@@ -41,8 +42,12 @@
        <div class="info-modelo">
         <h3 class="titulo-modelo" id="modelo1-titulo">Modelo Tech</h3>
         <p class="descricao-modelo">Ideal para profissionais de tecnologia, desenvolvedores e programadores</p>
-        <div class="botoes-modelo"><button class="botao-modelo botao-preview">👁️ Preview</button> <button class="botao-modelo botao-selecionar">Selecionar</button>
+        <div class="botoes-modelo">
+         
+         <button (click)="abrirPreview('tech')" class="botao-modelo botao-preview">👁️ Preview</button> 
+         <button (click)="selecionarEIrFormulario('tech')" class="botao-modelo botao-selecionar">Selecionar</button>
         </div>
+
        </div>
       </article>
       
@@ -57,7 +62,11 @@
        <div class="info-modelo">
         <h3 class="titulo-modelo" id="modelo2-titulo">Modelo Moderno</h3>
         <p class="descricao-modelo">Design arrojado e contemporâneo para profissionais inovadores</p>
-        <div class="botoes-modelo"><button class="botao-modelo botao-preview">👁️ Preview</button> <button class="botao-modelo botao-selecionar">Selecionar</button>
+        <div class="botoes-modelo">
+         
+         <button (click)="abrirPreview('moderno')" class="botao-modelo botao-preview">👁️ Preview</button> 
+         <button (click)="selecionarEIrFormulario('moderno')" class="botao-modelo botao-selecionar">Selecionar</button>
+        
         </div>
        </div>
       </article>
@@ -73,8 +82,12 @@
        <div class="info-modelo">
         <h3 class="titulo-modelo" id="modelo3-titulo">Modelo Minimalista</h3>
         <p class="descricao-modelo">Clean e objetivo, perfeito para destacar suas conquistas</p>
-        <div class="botoes-modelo"><button class="botao-modelo botao-preview">👁️ Preview</button> <button class="botao-modelo botao-selecionar">Selecionar</button>
+        <div class="botoes-modelo">
+         
+         <button (click)="abrirPreview('minimalista')" class="botao-modelo botao-preview">👁️ Preview</button> 
+         <button (click)="selecionarEIrFormulario('minimalista')" class="botao-modelo botao-selecionar">Selecionar</button>
         </div>
+
        </div>
       </article>
       
@@ -89,8 +102,13 @@
        <div class="info-modelo">
         <h3 class="titulo-modelo" id="modelo4-titulo">Modelo Clássico</h3>
         <p class="descricao-modelo">Elegante e tradicional, ideal para áreas corporativas</p>
-        <div class="botoes-modelo"><button class="botao-modelo botao-preview">👁️ Preview</button> <button class="botao-modelo botao-selecionar">Selecionar</button>
+        <div class="botoes-modelo">
+         
+         <button (click)="abrirPreview('classico')" class="botao-modelo botao-preview">👁️ Preview</button> 
+         <button (click)="selecionarEIrFormulario('classico')" class="botao-modelo botao-selecionar">Selecionar</button>
         </div>
+
+
        </div>
       </article>
       
@@ -105,7 +123,10 @@
        <div class="info-modelo">
         <h3 class="titulo-modelo" id="modelo5-titulo">Modelo Executivo</h3>
         <p class="descricao-modelo">Sofisticado e profissional para altos cargos gerenciais</p>
-        <div class="botoes-modelo"><button class="botao-modelo botao-preview">👁️ Preview</button> <button class="botao-modelo botao-selecionar">Selecionar</button>
+        <div class="botoes-modelo">
+         
+         <button (click)="abrirPreview('executivo')" class="botao-modelo botao-preview">👁️ Preview</button> 
+         <button (click)="selecionarEIrFormulario('executivo')" class="botao-modelo botao-selecionar">Selecionar</button>
         </div>
        </div>
       </article>
@@ -121,10 +142,37 @@
        <div class="info-modelo">
         <h3 class="titulo-modelo" id="modelo6-titulo">Modelo Criativo</h3>
         <p class="descricao-modelo">Vibrante e único para profissionais de áreas criativas</p>
-        <div class="botoes-modelo"><button class="botao-modelo botao-preview">👁️ Preview</button> <button class="botao-modelo botao-selecionar">Selecionar</button>
+        <div class="botoes-modelo">
+         
+         <button (click)="abrirPreview('criativo')" class="botao-modelo botao-preview">👁️ Preview</button> 
+         <button (click)="selecionarEIrFormulario('criativo')" class="botao-modelo botao-selecionar">Selecionar</button>
         </div>
        </div>
       </article>
      </div>
     </div>
    </section>
+   <div class="modal-overlay" *ngIf="modeloPreviewId" (click)="fecharPreview()">
+    
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        
+        <button class="modal-fechar" (click)="fecharPreview()">X</button>
+        
+        <h3 class="modal-titulo">Pré-visualização do Modelo</h3>
+        
+        <div class="preview-container">
+            <ng-container *ngComponentOutlet="componentePreview"></ng-container>
+        </div>
+        
+        <div class="modal-botoes">
+            <button 
+                (click)="selecionarEIrFormulario(modeloPreviewId!)" 
+                class="botao-modelo botao-selecionar"
+            >
+                Selecionar e Continuar
+            </button>
+        </div>
+
+    </div>
+</div>
+  </main>
