@@ -422,7 +422,7 @@ overflow-y: auto;
 }
 
 @keyframes modalEntrada {
- from {
+from {
 transform: scale(0.9);
 opacity: 0;
 }
