@@ -1,0 +1,192 @@
+    .secao-principal {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .titulo-principal {
+      font-size: 48px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .subtitulo {
+      font-size: 20px;
+      color: #e3f2fd;
+      margin-bottom: 0;
+      font-weight: 400;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .botao-escolher {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 20px 60px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .botao-escolher:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(79, 172, 254, 0.6);
+    }
+
+    .secao-cards {
+      padding: 40px 20px 100px;
+    }
+
+    .container-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 35px 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s ease;
+      border: 3px solid transparent;
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .card.verde {
+      border-color: #4caf50;
+      background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(255, 255, 255, 0.95));
+    }
+
+    .card.amarelo {
+      border-color: #ffc107;
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 255, 255, 0.95));
+    }
+
+    .card.vermelho {
+      border-color: #f44336;
+      background: linear-gradient(135deg, rgba(244, 67, 54, 0.15), rgba(255, 255, 255, 0.95));
+    }
+
+    .card.azul {
+      border-color: #2196f3;
+      background: linear-gradient(135deg, rgba(33, 150, 243, 0.15), rgba(255, 255, 255, 0.95));
+    }
+
+    .icone-card {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .card.verde .icone-card {
+      background: linear-gradient(135deg, #4caf50, #66bb6a);
+    }
+
+    .card.amarelo .icone-card {
+      background: linear-gradient(135deg, #ffc107, #ffca28);
+    }
+
+    .card.vermelho .icone-card {
+      background: linear-gradient(135deg, #f44336, #e57373);
+    }
+
+    .card.azul .icone-card {
+      background: linear-gradient(135deg, #2196f3, #42a5f5);
+    }
+
+    .titulo-card {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1e3c72;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .lista-itens {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .lista-itens li {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.8;
+      padding: 10px 0 10px 30px;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .lista-itens li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .card.verde .lista-itens li::before {
+      color: #4caf50;
+    }
+
+    .card.amarelo .lista-itens li::before {
+      color: #ffc107;
+    }
+
+    .card.vermelho .lista-itens li::before {
+      content: "✗";
+      color: #f44336;
+    }
+
+    .card.azul .lista-itens li::before {
+      color: #2196f3;
+    }
+
+    @media (max-width: 768px) {
+      .conteudo-cabecalho {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .titulo-principal {
+        font-size: 32px;
+      }
+
+      .subtitulo {
+        font-size: 16px;
+      }
+
+      .botao-escolher {
+        font-size: 18px;
+        padding: 18px 45px;
+      }
+
+      .container-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 30px 25px;
+      }
+    }

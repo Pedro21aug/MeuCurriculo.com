@@ -1,0 +1,94 @@
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+
+    
+    .area-conteudo {
+      padding: 40px 0;
+      min-height: calc(100% - 98px);
+    }
+    
+    .pagina-conteudo {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      min-height: 1200px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .area-botoes {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .botao {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 20px 60px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .botao:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(79, 172, 254, 0.6);
+    }
+    
+    .botao:active {
+      transform: translateY(0);
+    }
+    
+    @media (max-width: 768px) {
+      .cabecalho {
+        padding: 20px 0;
+      }
+      
+      .logo-area {
+        gap: 12px;
+      }
+      
+      .icone-logo {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .icone-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      
+      .nome-site {
+        font-size: 22px;
+      }
+      
+      .slogan {
+        font-size: 12px;
+      }
+      
+      .area-conteudo {
+        padding: 24px 0;
+      }
+      
+      .pagina-conteudo {
+        padding: 24px;
+        border-radius: 12px;
+      }
+
+    }

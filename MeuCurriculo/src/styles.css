@@ -12,11 +12,7 @@ body {
   box-sizing: border-box;
 }
 
-html {
-height: 100vh;
-    }
 
-/* ===== CONFIGURAÇÃO EXCLUSIVA DE IMPRESSÃO ===== */
 @media print {
 
   body * {

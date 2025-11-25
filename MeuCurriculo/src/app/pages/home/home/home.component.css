@@ -1,0 +1,74 @@
+.container {
+      margin: 0 auto;
+      padding: 0 50px;
+    }
+
+    .secao-principal {
+      text-align: center;
+      padding: 200px 20px 80px;
+    }
+
+    .titulo-principal {
+      font-size: 56px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .subtitulo {
+      font-size: 22px;
+      color: #e3f2fd;
+      margin-bottom: 45px;
+      font-weight: 400;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .botao-comecar {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 20px 60px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .botao-comecar:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(79, 172, 254, 0.6);
+    }
+
+    /* Seção de Passos */
+    .secao-passos {
+      padding: 60px 20px 100px;
+    }
+
+    .titulo-secao {
+      text-align: center;
+      font-size: 38px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 50px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .container-passos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+
+
+
+  

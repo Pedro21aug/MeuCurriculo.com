@@ -1,0 +1,70 @@
+import { routes } from '../../../app.routes';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ModeloService } from '../../../services/services.modelo';
+import { ClassicoComponent } from '../../../Modelos.1/classico/classico.component';
+import { CriativoComponent } from '../../../Modelos.1/criativo/criativo.component';
+import { ExecutivoComponent } from '../../../Modelos.1/executivo/executivo.component';
+import { TechComponent } from '../../../Modelos.1/tech/tech.component';
+import { MinimalistaComponent } from '../../../Modelos.1/minimalista/minimalista.component';
+import { ModernoComponent } from '../../../Modelos.1/moderno/moderno.component';
+import { NgIf } from "@angular/common";
+import html2pdf from 'html2pdf.js';
+import { HeaderComponent } from '../../../components/header/header.component';
+import { FooterComponent } from '../../../components/footer/footer.component';
+
+@Component({
+  selector: 'app-resultado',
+  standalone: true,
+  imports: [
+    ClassicoComponent, 
+    CriativoComponent, 
+    ExecutivoComponent, 
+    TechComponent, 
+    MinimalistaComponent, 
+    ModernoComponent, 
+    NgIf, 
+    HeaderComponent,
+    FooterComponent],
+  templateUrl: './resultado.component.html',
+  styleUrl: './resultado.component.css'
+})
+export class ResultadoComponent implements OnInit {
+
+  modeloEscolhido: string = '';
+
+  constructor(
+    private router: Router,
+    private modeloService: ModeloService
+  ) {}
+
+ngOnInit() {
+    this.modeloEscolhido = this.modeloService.getModelo().toLowerCase(); 
+    console.log('Modelo recuperado', this.modeloEscolhido);
+}
+
+
+  navegar(){
+    this.router.navigate(['/escolhermodelo']);
+  }
+
+  imprimirCurriculo() {
+    window.print();
+  }
+
+  downloadPDF() {
+    const element = document.getElementById('pagina-conteudo')
+
+    if (!element) return;
+
+    const options = {
+      margin: 0.5,
+      filename: 'MeuCurriculoPDF',
+      image: {type: 'jpeg' as const, quality: 0.98},
+      html2canvas: {scale: 2},
+      jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' as const}
+    };
+
+    html2pdf().from(element).set(options).save();
+  }
+}

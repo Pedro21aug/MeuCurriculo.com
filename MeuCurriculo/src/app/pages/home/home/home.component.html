@@ -1,0 +1,37 @@
+<!--CABEÇALHO-->
+<header>
+<app-header></app-header>
+</header>
+
+
+<!--TEXTO PRINCIPAL-->
+<main>
+   <section class="secao-principal">
+      <div class="container">
+         <h2 class="titulo-principal" id="titulo-principal">Crie seu currículo profissional em minutos</h2>
+         <p class="subtitulo" id="subtitulo">Destaque-se no mercado com um currículo impecável</p>
+         <button (click)="navegar()" class="botao-comecar" id="botao-comecar">Começar a Criar</button>
+      </div>
+   </section>
+
+
+   <!--CARDS-PASSOS-->
+   <section class="secao-passos">
+      <div class="container">
+         <h2 class="titulo-secao">Como Funciona</h2>
+
+         <div class="container-passos">
+
+
+            <app-cardpassos numero="1" titulo="Escolha o Modelo"
+            descricao="Modelos profissionais e modernos"></app-cardpassos>
+            <app-cardpassos numero="2" titulo="Preencha seus Dados"
+            descricao="Interface intuitiva e rápida"></app-cardpassos>
+            <app-cardpassos numero="3" titulo="Download em PDF"
+               descricao="Pronto para enviar às empresas"></app-cardpassos>
+
+         </div>
+      </div>
+   </section>
+   <app-footer></app-footer>
+</main>

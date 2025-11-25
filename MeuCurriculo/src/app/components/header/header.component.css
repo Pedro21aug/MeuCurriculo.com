@@ -1,0 +1,74 @@
+.container {
+      margin: 0 auto;
+      padding: 0 50px;
+     }
+
+    .cabecalho {
+      background: linear-gradient(to right, rgba(30, 60, 114, 0.95), rgba(42, 82, 152, 0.95));
+      padding: 20px 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);      
+    }
+
+    .conteudo-cabecalho {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .icone-logo {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+    
+    }
+
+    .nome-site {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .slogan {
+      font-size: 13px;
+      color: #b8d4ff;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    .menu-cabecalho {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .secao-principal {
+      text-align: center;
+      padding: 100px 20px 80px;
+    }
+
+    nav {
+    display: flex;
+    gap: 30px; 
+    align-items: center; 
+    color: white; 
+    }
+
+    nav a {
+    color: white; 
+    text-decoration: none;
+    }
